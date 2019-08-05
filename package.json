@@ -1,0 +1,20 @@
+{
+  "name": "prismagram2-backend",
+  "version": "1.0.0",
+  "description": "Clone Instagram Backend with GraphQL + Prisma + mongoDB",
+  "repository": "https://github.com/KIMJUNSICK/Prismagram2_Backend",
+  "author": "Kim Jun Sik <jinaganda5@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  }
+}
