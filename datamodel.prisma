@@ -11,6 +11,7 @@ type User {
   post: [Post!]!
   likes: [Like!]!
   comments: [Comment!]!
+  rooms: [Room!]!
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
@@ -49,4 +50,18 @@ type File {
   url: String!
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
+}
+
+type Room {
+  id: ID! @id
+  user: [User!]!
+  messages: [Message!]!
+}
+
+type Message {
+  id: ID! @id
+  text: String!
+  from: User! @relation(name: "From")
+  to: User! @relation(name: "To")
+  room: Room!
 }
