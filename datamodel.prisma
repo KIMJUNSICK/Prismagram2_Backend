@@ -14,6 +14,7 @@ type User {
   rooms: [Room!]!
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
+  loginSecret: String
 }
 
 type Post {

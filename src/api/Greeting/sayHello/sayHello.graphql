@@ -1,8 +1,0 @@
-type User {
-  userName: String!
-  email: String!
-}
-
-type Query {
-  seeUser(id: String!): User!
-}
