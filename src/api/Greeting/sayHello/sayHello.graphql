@@ -1,3 +1,8 @@
+type User {
+  userName: String!
+  email: String!
+}
+
 type Query {
-  sayHello: String!
+  seeUser(id: String!): User!
 }
