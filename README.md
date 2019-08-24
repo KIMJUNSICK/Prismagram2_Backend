@@ -10,7 +10,7 @@ Clone Instagram Backend with GraphQL + Prisma + mongoDB
 - [ ] See the Feed
 - [ ] See User Profile
 - [ ] Edit Profile
-- [ ] Follow / Unfollow
+- [x] Follow / Unfollow
 - [ ] See full Post
 - [x] Like / Unlike a Post
 - [x] Comment on a Post
