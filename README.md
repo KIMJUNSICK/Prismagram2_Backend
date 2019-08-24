@@ -6,9 +6,9 @@ Clone Instagram Backend with GraphQL + Prisma + mongoDB
 
 - [x] Create Account
 - [x] Request Secret
-- [ ] Confirm Secret (Log In)
+- [x] Confirm Secret (Log In)
 - [ ] See the Feed
-- [ ] Like / Unlike a Post
+- [x] Like / Unlike a Post
 - [ ] Comment on a Post
 - [ ] Upload a Post
 - [ ] Edit a Post (Delete)
