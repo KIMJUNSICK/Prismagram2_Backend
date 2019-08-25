@@ -15,6 +15,6 @@ Clone Instagram Backend with GraphQL + Prisma + mongoDB
 - [x] Like / Unlike a Post
 - [x] Comment on a Post
 - [ ] Upload a Post
-- [] Edit a Post (Delete)
+- [ ] Edit a Post (Delete)
 - [x] Search by User
 - [x] Search by location & caption
