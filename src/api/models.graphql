@@ -22,7 +22,9 @@ type Post {
   files: [File!]!
   caption: String!
   comments: [Comment!]!
+  commentsCount: Int!
   likes: [Like!]!
+  likesCount: Int!
 }
 
 type Like {

@@ -13,6 +13,29 @@ export default {
     post: ({ id }) => prisma.comment({ id }).post()
   },
   Post: {
-    comments: ({ id }) => prisma.post({ id }).comments()
+    files: ({ id }) => prisma.post({ id }).files(),
+    comments: ({ id }) => prisma.post({ id }).comments(),
+    commentsCount: ({ id }) =>
+      prisma
+        .commentsConnection({
+          where: {
+            post: { id }
+          }
+        })
+        .aggregate()
+        .count(),
+    likes: ({ id }) => prisma.post({ id }).likes(),
+    likesCount: ({ id }) =>
+      prisma
+        .likesConnection({
+          where: {
+            post: { id }
+          }
+        })
+        .aggregate()
+        .count()
+  },
+  Like: {
+    user: ({ id }) => prisma.like({ id }).user()
   }
 };
