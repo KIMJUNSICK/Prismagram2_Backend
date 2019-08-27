@@ -18,3 +18,7 @@ Clone Instagram Backend with GraphQL + Prisma + mongoDB
 - [ ] Edit a Post (Delete)
 - [x] Search by User
 - [x] Search by location & caption
+- [ ] See rooms
+- [ ] See room
+- [ ] Send private Message
+- [ ] Receive Message (Realtime)
