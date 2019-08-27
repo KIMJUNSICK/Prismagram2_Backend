@@ -7,11 +7,5 @@ export default {
       const { user } = request;
       return prisma.user({ id: user.id });
     }
-  },
-  User: {
-    fullName: (parent, __, { request }) => {
-      console.log(parent);
-      return "lalala";
-    }
   }
 };

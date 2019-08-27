@@ -3,12 +3,12 @@ type User {
   userName: String!
   email: String!
   avatar: String
-  itsMe: Boolean!
+  isSelf: Boolean!
   firstName: String
   lastName: String
   fullName: String
   bio: String
-  amIFollowing: Boolean!
+  isFollowing: Boolean!
   following: [User!]!
   followers: [User!]!
   post: [Post!]!

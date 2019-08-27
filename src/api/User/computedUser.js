@@ -3,13 +3,14 @@ import { prisma } from "../../../generated/prisma-client";
 export default {
   User: {
     fullName: parent => `${parent.firstName} ${parent.lastName}`,
-    amIFollowing: async (parent, __, { request }) => {
+    isFollowing: async (parent, __, { request }) => {
       const { user } = request;
       const { id: parentId } = parent;
       try {
         const exist = await prisma.$exists.user({
-          AND: [{ id: parentId }, { followers_some: user.id }]
+          AND: [{ id: user.id }, { following_some: { id: parentId } }]
         });
+        console.log(exist);
         if (exist) {
           return true;
         } else {
@@ -20,7 +21,7 @@ export default {
         return false;
       }
     },
-    itsMe: async (parent, __, { request }) => {
+    isSelf: async (parent, __, { request }) => {
       const { user } = request;
       const { id: parentId } = parent;
       return user.id === parentId;
