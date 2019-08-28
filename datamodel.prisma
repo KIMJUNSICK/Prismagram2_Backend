@@ -56,13 +56,13 @@ type File {
 
 type Room {
   id: ID! @id
-  user: [User!]!
+  participants: [User!]!
   messages: [Message!]!
 }
 
 type Message {
   id: ID! @id
-  text: String!
+  message: String!
   from: User! @relation(name: "From")
   to: User! @relation(name: "To")
   room: Room!

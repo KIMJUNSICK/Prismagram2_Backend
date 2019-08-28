@@ -8,5 +8,9 @@ export default {
   Like: {
     user: ({ id }) => prisma.like({ id }).user(),
     post: ({ id }) => prisma.like({ id }).post()
+  },
+  Room: {
+    participants: ({ id }) => prisma.room({ id }).participants(),
+    messages: ({ id }) => prisma.room({ id }).messages()
   }
 };

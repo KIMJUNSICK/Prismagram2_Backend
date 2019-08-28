@@ -52,13 +52,13 @@ type File {
 
 type Room {
   id: ID!
-  user: [User!]!
+  participants: [User!]!
   messages: [Message!]!
 }
 
 type Message {
   id: ID!
-  text: String!
+  message: String!
   from: User!
   to: User!
   room: Room!
