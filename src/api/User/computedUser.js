@@ -30,6 +30,7 @@ export default {
     followers: ({ id }) => prisma.user({ id }).followers(),
     post: ({ id }) => prisma.user({ id }).post(),
     likes: ({ id }) => prisma.user({ id }).likes(),
-    comments: ({ id }) => prisma.user({ id }).comments()
+    comments: ({ id }) => prisma.user({ id }).comments(),
+    rooms: ({ id }) => prisma.user({ id }).rooms()
   }
 };
