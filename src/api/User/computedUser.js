@@ -29,6 +29,13 @@ export default {
     following: ({ id }) => prisma.user({ id }).following(),
     followers: ({ id }) => prisma.user({ id }).followers(),
     post: ({ id }) => prisma.user({ id }).post(),
+    postsCount: ({ id }) =>
+      prisma
+        .postsConnection({
+          where: { user: { id } }
+        })
+        .aggregate()
+        .count(),
     likes: ({ id }) => prisma.user({ id }).likes(),
     comments: ({ id }) => prisma.user({ id }).comments(),
     rooms: ({ id }) => prisma.user({ id }).rooms()
